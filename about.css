@@ -1,0 +1,93 @@
+/* About Us Section */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.profile-container {
+    max-width: 1200px;
+    margin: 3% auto;
+    margin-bottom: 3%;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .profile-text h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .profile-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .profile-details div {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .profile-details strong {
+    color: #2c3e50;
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    flex-shrink: 0;
+    width: 300px;
+    height: 350px;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-text {
+      margin-right: 0;
+    }
+  
+    .profile-details {
+      grid-template-columns: 1fr;
+    }
+  
+    .profile-image {
+      margin-top: 20px;
+      width: 250px;
+      height: 300px;
+    }
+  }
+/*End About */

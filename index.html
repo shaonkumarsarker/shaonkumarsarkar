@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Hero Section with Animated Icons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://blogger.googleusercontent.com/img/a/AVvXsEjzuk6CE19y-NIgYbyAtHak71qZby7Z_5PSnj-YYW2OFKLpq7U9BlGPdagjX8FWe2dNZZZcl8PGGd-M7qEeXTXj-p6W-8XE5W2ZYFUUFMj4F5a3lpk6GqiaCUrXNTLrUEsS_XsyyK_-hAAwDb-a87fwpGlKUl5AisJZVR5UCyUjCgSIZ8T_PNAgY_Sh4E0=s234"
+          alt="Shaon Kumar Sarker">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#hire" class="hire-btn">Hire Me</a>
+      <div class="hamburger" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <div class="hero-section" id="home">
+    <div class="container">
+      <!-- Left Section: Text and Buttons -->
+      <div class="hero-left fadeIn">
+        <h1>Graphic Designer & WordPress Developer</h1>
+        <p>Specializing in creative design and seamless website development with WordPress. Bringing your ideas to life
+          with custom solutions and expert design skills.</p>
+        <div class="buttons">
+          <a href="https://drive.google.com/file/d/1_Tor4s83Xqj7m-l2n5RHA6jM0Hn4tOkD/view?usp=sharing" target="_blank" class="btn btn-download">
+            <i class="fa fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-hire">
+            <i class="fa fa-briefcase"></i> Hire Me
+          </a>
+        </div>
+      </div>
+      <!-- Right Section: Main Image and Icons -->
+      <div class="hero-right fadeIn">
+        <div class="image-container">
+          <img class="main-image" src="https://i.ibb.co.com/mB8Lk81/pp.png" alt="Profile Image">
+
+          <!-- Icons around the Image -->
+          <div class="icon-container photoshop icon-default">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/512px-Adobe_Photoshop_CC_icon.svg.png"
+              alt="Photoshop">
+          </div>
+          <div class="icon-container excel icon-small">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png"
+              alt="Excel">
+          </div>
+          <div class="icon-container illustrator icon-default">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/512px-Adobe_Illustrator_CC_icon.svg.png"
+              alt="Illustrator">
+          </div>
+          <div class="icon-container wordpress icon-small">
+            <img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Wordpress-512.png"
+              alt="WordPress">
+          </div>
+          <div class="icon-container html icon-small">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML">
+          </div>
+          <div class="icon-container premiere-pro icon-default">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1051px-Adobe_Premiere_Pro_CC_icon.svg.png"
+              alt="Premiere Pro">
+          </div>
+          <div class="icon-container word icon-small">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/516px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
+              alt="Word">
+          </div>
+          <div class="icon-container powerpoint icon-small">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png"
+              alt="PowerPoint">
+          </div>
+          <div class="icon-container css icon-small">
+            <img class="icon" src="https://i.postimg.cc/ZWZjfmR1/pngwing-com.png" alt="CSS">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--About Us Section-->
+  <section class="about-container" id="about">
+    <div class="about-content">
+      <!-- Image Box -->
+      <div class="about-image">
+        <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Shaon Kumar Sarker" class="profile-image">
+      </div>
+      <!-- Info Box -->
+      <div class="about-info">
+        <h5>Hi, I am</h5>
+        <h1 class="title">Shaon Kumar Sarker</h1>
+        <h2 class="subtitle">Graphic Designer & WordPress Developer</h2>
+        <p class="intro-text">
+          I'm a passionate graphic designer and WordPress developer with over 3 years of experience.
+          I specialize in creating stunning designs and innovative solutions using tools like Adobe Photoshop,
+          Illustrator, Premiere Pro, and coding languages like HTML, CSS, and JavaScript.
+        </p>
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <h3 class="skills-title">My Skills</h3>
+          <div class="skills">
+            <div class="skill"><i class="fas fa-pencil-ruler skill-icon"></i> Graphic Design</div>
+            <div class="skill"><i class="fab fa-wordpress skill-icon"></i> WordPress</div>
+            <div class="skill"><i class="fas fa-code skill-icon"></i> HTML/CSS/JS</div>
+            <div class="skill"><i class="fas fa-camera skill-icon"></i> Photography</div>
+            <div class="skill"><i class="fas fa-chart-line skill-icon"></i> Digital Marketing</div>
+            <div class="skill"><i class="fas fa-brush skill-icon"></i> UI/UX Design</div>
+            <div class="skill"><i class="fas fa-palette skill-icon"></i> Branding</div>
+            <div class="skill"><i class="fas fa-box skill-icon"></i> E-Commerce Development</div>
+            <div class="skill"><i class="fas fa-pencil-alt skill-icon"></i> Content Creation</div>
+        </div>        
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+          <a href="https://drive.google.com/file/d/1_Tor4s83Xqj7m-l2n5RHA6jM0Hn4tOkD/view?usp=sharing" target="_blank" class="btn primary-btn"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#contact" class="btn secondary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--About Us Section End-->
+
+  <!--My Our Trusted Partners-->
+
+
+  <div class="marquee-container">
+    <div class="marquee-mask-left"></div>
+    <div class="marquee-mask-right"></div>
+
+    <div class="marquee-track" id="track">
+      <div class="logo-slide">
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYo6DeixOBU-1tVaujwQtlhOWoqPnZkAWd2e0cBek8WvFHpA7UB-BWY3mioBBXQubri0PLw6Q9qvT2OkdQlHcPrtVNQifxHwCS_yN82nszHHovMFCwvGT5obo1q6uNgzndtQWbqQGtXD_EdX38EVuwwwwkNn9wyU3SQ79kHAxku8LkEwcbFfEdWJuP1_ie/s320/adobe-photoshop-logo.png" alt="Company 1" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyYd7C215xnS1ieJqBfkLQkVIh0OIU3HsuFeFw6Xu9qDZgBf2tmBzBnSelclvCSKQoGTQnEkQT95ehGAbiyMkR5jt9vYZ9kWFqnluPWfRt0A2vLEldtw97X3TWMtnNuDtzLNuQH6D54i6RZhZfmttoFGHjPNv1sk5arGQ_ySqeRRopPVJuyNeyrdJ36Fop/s320/adobe-lightroom-icon.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiejBxaov5ZI1QzEQ8DvQENy302HQhT6-AThNd4PjkmFwOVpd3deDCniQ9QxcqmOKKJSh7R1z4pv3hxX5K4fGI9QdGttItQoZ4JesJszF8rfHgJPTvz06gJl19ChnixmSuZY1fzOdexLiAtUy4amQaJ3pUm3OPPybUnn2m-hATiDYzYFSXR60fKXQB3s654/s1600/Adobe%20Xd%20Logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8joPZTQGY7T9bdkqsV7te86mzdh4f4qDwvOtOfn_ohtelM9bbVIdP6TLxljJopZl51jZp0IUkjHP8tqoboTUzTyIT4zr-ktMbbuc_8UVLOadx-efnKU5jy8oAvp72c9-l8TpZVes6SKBYsJI9Vbyd-9mIn938abstqq3ZCzQ0dKIipvwE8i0By-Y_vh4F/s1600/Adobe%20Premiere%20Logo.png" alt="Company 3" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8lR9hjpOfzpTZAaLOPBlEAuibe4XbC7JdXMTS6ZiWWtkKOAYMlt8LVmxkt2V3qWL_kcqa773DuLbwPreQn1twq6tpauGa-C-QR6rh77V4XVc07XXTh3ZtlpAONQSCyli3kWOM5TGvfPVU6fTfQyKCnEmgoy55BONsrYzRVNtqVhhzAl5bI8YcdMh_BJqh/s1600/Adobe%20InDesign%20Logo.png" alt="Company 4" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj550o_7Y6qm9dcBvt2tVLiAw3dlirAY-qV_wctr2HOj0E8KTzR-9NHZn_xqMQSZr85pWn9qtN3RmIaf-r_gGkfFaR48lAszVEF-JHTt3XSmpvotk_C4W3-S4vaGCKlH7345zoeivpV6OK6hM9qCho9G8D12EyfiCqDwky1_toRqCSWsBwpnzgbCpEamjy6/s1600/Adobe%20Illustrator%20Logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMiGK9cMeEhEYdVpp6qi2y4kxN4V8VDv-91yetHYXhDMTs8XUYe1gq2Olwlarss9K563abcwen7-elVv5UwfriL3FqVNbC0D6zTHSnlPo9dz3d_1EPorATmgmATOGZpqSJGkD50TNXUpOVBwGc_cgd_FDlfaMcNg6eWpRjRF-1eF1LNj_Jlu5gAQam43J5/s1600/Adobe%20After%20Effects%20Logo.png" alt="Company 5" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj550o_7Y6qm9dcBvt2tVLiAw3dlirAY-qV_wctr2HOj0E8KTzR-9NHZn_xqMQSZr85pWn9qtN3RmIaf-r_gGkfFaR48lAszVEF-JHTt3XSmpvotk_C4W3-S4vaGCKlH7345zoeivpV6OK6hM9qCho9G8D12EyfiCqDwky1_toRqCSWsBwpnzgbCpEamjy6/s1600/Adobe%20Illustrator%20Logo.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4gYtL9mI3oUPOEj5KhGoUS-tSEDDDo4BNU-S-S0iE46So7vozY6QRQ0Uw8EA2-VXadpcdnzU20VhSj0Ry0vOIrfw1ZjlhMRfg6G-lYR3T478PH26TXzRybsVN-OU6dxVsui_KAdF7j4_Rrc9nVRyGZ5Wh79ZutdPQIhJHIbFdvCg91uMzGxVQthx5BWJ7/s320/1656737543fiverr-png.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq4B9kttbfx3UgEnosCsESBwwMvhA_Qzv4TvoEha6xY38LUHpkoshN0tRcmur1-3qo14FeKSLnx7DlIlx-DJSgcdxF4yypFtse1WCScREbul_NLejscaolOCqH_iMAK5sZbH25u9qnWnNd4o8QC7PlPX5OB_LshMc52PyMNXxwyQW1vEuZd7v2JPRftscl/s320/Blogger_logo.svg.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-oEVpwOdUCot5HmwJEattnU5HfFk9ZFZGlopMp7PR5ITySW09VhKwWuEussIcexp6y1TAJxXTRy12dqnK2oKOXOmZv0RjuTVIGVy9pdz0-jZMvBSd0N2pJ8D2vfF2JXOvDMpk153ZhodFOe-ONCCWh44ZhqI9XarYlAUvizUr1bu7K3XVdzgpTQAY4uQl/s320/Freelancer%20Logo.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmryB4NIbml67VjlIYynC_keU8fco9I1OqP77qZ9udAdL-YBb11PzOsun7OAULzuTsF5X7K8BXXOU_PEYnV63Y-tR0fKdFJMBD1_qsZxpX8eGWfQFu-bOJAqqNX6_NHbKbNERWBpBYhzNYrKu80-J7Ykt7dqIuf94YErxNUEvqdDnF6AA3STtwZOf2LEvd/s1600/Upwork%20Logo.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiJDbl-9wvGYe3xYo4zCCoqxdoCUqJKJM7REk9jyZosIeGsg0xN_l7wYWOHDczRXjGKrgXgscjKWNkt_h5bHeMnBOa3WWzfrDatMoCwPm6Tc0jCUNyaj4eAU57pocjdihcAu7gptvPM4Bxj5_tTKfa9S2iWY3Vnl-RrwjPjiSqohQrgPg8uJmep2YSD4MF/s320/wordpress-logo.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhanKNxdpBD9QG8aK7Zk0UwJj0t2sgrBlXu6SAngKbDvv4dtY6MPyyQIpNV4-lzF4zDVh2ukBjzqG55MKRSHxp8l3W_tOJlj_hfPwYTNTmXEZ0fiil9JFhOCQVYQA3thtBstL-Cjb7nE3nFcFRjzCJvfJXgZNmfpU9PfpxU2PaTPNb7wwkX7w8eb9sHZElM/s1600/Elementor%20Logo.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2XMxkhmGJR3H4I3fjb3VyAHQezqWELXj3K_JzXC9BEPMGKewhDB9foU8UmMqV0Wuz0s8Q4yQRy8RnP03QLXgSZYbr7FkuKvJR_49vTm2KwdhOKUfNrNJ_tACNoVDfiH78uJrA1UKYtBN0WjVQFJn_FR-2vw_4y-KEoFGs1ZK-hAVQK4toSf8yOJziygk7/s1600/Woocommerce%20Logo.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghrQSE8GJZGtD_9wo_Ayq8D3VFln7EhZcbW5IAtMf2xK2jvO7_bM9cpWu3DHcnKpdLP8vaaBmAeq4EF937TScTp6WHhMQ7PfyE_f8y-rcpN_WX6JuIGYLd7ACpmWJKRLwjhyphenhyphenA92VydIw9QUoYVRdgIlss0ffAZ3NoP0GhbZAPpXKewqbup_lK2cBhpraF6/s320/YouTube-Logo.wine.png" alt="Company 2" class="logo" />
+        </div><div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn8xn5EvYdbllO0CPNcsP8Jqv5RaS-JKq8MPIaFr8m5U-YM49v6wJcOM5LKpfiAv-stIMgZaaQMHcS9Hs8FTINiaRihavaI_vmFlYgNg3RXUz-HjvA5uZO7y0lmpzIryKoJcUjMpyvLEsLyHHoEnOtJ9ULVbm-AIsvVDE6UJ28bOr4yoBLoGZMtRoioB__/s1600/Payoneer%20New%20Logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnykWmq1v4TD9VvvJvciWC_JacfEqZn0F-BkBDr6Jtvi_xkoRsqU3Y856gMPzVwVTPGXH-68u00zWHHJyzSNar2ulB0lneZ9l3b_DbFbeOIQkgeeTbz0HzLg0kb6E2uIbo8sN3XqnM5XsRteSMZktzoVb4K9Pv1LK8gmkdK8rwG3rYZzaNZYY2mx4Ic5u6/s1600/linkedin-logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYOV_CPSiLT3OEI6D0dAwfFl4oFUKpstrokbJcEE6n8bj2GhjWob-ID0sIcKAQ9ZQi201ygt4M2e3xgJoXh0_O1Gkyl5-ohrAUb5jNcaBwqtl4i-Nkm6IlD31Rl8J8KcJeNMYFGccJduYAYxpniodJDv-88-6973r1tYe6d7ltAvJ968K-JQLYG8aRftWb/s1600/facebook-logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0LPpxwc29XiMbtVYtKx9hmMqI34GR7mdFy0dLVhWJ7JfzNaJbzULdbPUDAtLNxxU19hZtNvcABRFWLds1a3kziphmRaIsrhSjJ9qHoAN87i8n82EFyUFh4bvrg1lj3BCZkus_234cOvgNzQ9I5aCS9vzhTSpu8KnFC5dIfWpHozN8e0l30YbMQy_z3YTM/s1600/pinterest-logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT82HX5bGL6EsyG_kxer9S2_IXCbgJMBTsGW2EdDn49qPXW64vha1aipYBySvhuUZAgyUOVPoruSqEDsHkkishxQRtJBwGSEephKQ7_c-QaGV9bW_eWkFleIcBkRXlY68d3LFtcEzXHuk7v_tcq0yDL-Z92F5RVE8FEouNkXULKAkrN_YjeM9xtCQybMGT/s320/Canva%20New%20Logo.png" alt="Company 2" class="logo" />
+        </div>
+        <div class="logo-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX3ia7s1tXCN3nEv-OY_MU-x6r3Yza03A074vMgkT1wkVDThi2OVinIe1VgQr9oLbLy9fnNZ47GDCiMWUaYmJdEaOBDqC281VkVkD0rY6bQoRYt8QdeJ8Yr-LpgiC3NoXoC84xN7KXWHm7IF7IZvtY9gNaPLoVlEiCAovEYg07plHjiFXjfez44qLONNsT/s320/Semrush-logo.png" alt="Company 2" class="logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--My Our Trusted Partners END-->
+
+  <!--Portfolio Section-->
+  <!-- Paste the HTML code for the portfolio container, tabs, grid, and popup here -->
+  <div class="portfolio-container" id="portfolio">
+    <h1>My Creative Portfolio</h1>
+    <p>Explore my creative graphic design projects, where art meets functionality to deliver impactful visuals and stunning designs.</p>
+
+    <div class="tab-buttons">
+      <button class="tab-button active" data-tab="all">All</button>
+      <button class="tab-button" data-tab="post-design">Post Design</button>
+      <button class="tab-button" data-tab="youtube-design">YouTube Thumbnail</button>
+      <button class="tab-button" data-tab="business-card">Business Card</button>
+    </div>
+
+    <div class="portfolio-grid"></div>
+
+    <div class="pagination">
+      <button class="prev-button" disabled>❮ Prev</button>
+      <button class="next-button">Next ❯</button>
+    </div>
+  </div>
+
+  <div class="popup">
+    <div class="popup-content">
+      <img src="" alt="Popup Image">
+      <p class="popup-title"></p>
+      <button class="download-button">Download</button>
+      <button class="cancel-button">Cancel</button>
+    </div>
+  </div>
+  <!--Portfolio Section End-->
+
+
+  <!--Scrolling Website Porfolio Image-->
+
+
+  <section>
+
+    <div class="holderMM">
+      <div class="containerMM">
+        <h1 class="titleMM">Explore Stunning Website Templates</h1>
+        <p class="submm">Discover a collection of high-quality, responsive website templates designed to fit any
+          need.<br> Perfect for businesses, portfolios, blogs, and more!</p>
+        <div class="scroll-listMM">
+          <div class="scroll-itemMM">
+            <div class="iconsMM">
+              <a href="https://demo-link1.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </a>
+              <a href="https://demo-link2.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="scroll-itemMM">
+            <div class="iconsMM">
+              <a href="https://demo-link1.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </a>
+              <a href="https://demo-link2.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="scroll-itemMM">
+            <div class="iconsMM">
+              <a href="https://demo-link1.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </a>
+              <a href="https://demo-link2.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="buttonsweb">
+            <a href="#" target="_blank" text-align: center; class="btnweb primary-btn"></i> View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Scrolling Image END-->
+
+
+
+
+  <!--cursor-->
+  <div class="cursor-dot"></div>
+  <div class="cursor-dot-outline"></div>
+  <!--cursor-->
+
+  <!--Back To Top-->
+  <button id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <!--Back To Top End-->
+
+
+
+  <!--Services Section-->
+
+  <!-- Your Services Section -->
+  <section class="services-sectionCN" id="services">
+    <div class="containerCN">
+      <h2 class="section-titleCN">Our Expertise</h2>
+      <p class="section-descriptionCN">
+        Transforming ideas into impactful solutions. Explore our professional services.
+      </p>
+      <div class="services-grid">
+
+        <!-- Service Item 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 class="service-title">Graphic Design</h3>
+          <p class="service-description">
+            High-quality branding, logos, and print designs tailored to your vision.
+          </p>
+        </div>
+
+        <!-- Service Item 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-title">WordPress Development</h3>
+          <p class="service-description">
+            Custom websites that are fast, responsive, and optimized for SEO.
+          </p>
+        </div>
+
+        <!-- Service Item 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="service-title">Photography</h3>
+          <p class="service-description">
+            Capturing moments with creativity and delivering polished edits.
+          </p>
+        </div>
+
+        <!-- Service Item 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-description">
+            Result-driven strategies for SEO, social media, and online campaigns.
+          </p>
+        </div>
+
+        <!-- Service Item 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-description">
+            Designing intuitive interfaces and seamless digital experiences.
+          </p>
+        </div>
+
+        <!-- Service Item 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-description">
+            Engaging edits with professional motion graphics and effects.
+          </p>
+        </div>
+
+        <!-- Service Item 7 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="service-title">eCommerce Solutions</h3>
+          <p class="service-description">
+            Build seamless online stores with payment integration and great UX.
+          </p>
+        </div>
+
+        <!-- Service Item 8 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-pen-fancy"></i>
+          </div>
+          <h3 class="service-title">Content Creation</h3>
+          <p class="service-description">
+            Engaging blogs, videos, and social media content for your audience.
+          </p>
+        </div>
+
+        <!-- Service Item 9 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="service-title">Analytics & Reporting</h3>
+          <p class="service-description">
+            Data-driven insights and performance reports to optimize your strategies.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Services Section ENd-->
+
+
+
+
+  <!--Blog Section Designed-->
+
+
+
+  <!--Blog Section Designed END-->
+
+
+<!--Hire Me Button With Image-->
+
+
+  
+<div id="hire" class="cta-section">
+  <div class="cta-container">
+      <div class="profile-sectionhhr">
+          <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Profile Picture" class="profile-imagehhr">
+          <div class="verified-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16px" height="16px">
+                  <circle cx="12" cy="12" r="12" fill="#27ae60"></circle>
+                  <path d="M10.5 16.3l-3.3-3.3.7-.7 2.6 2.6 5.9-5.9.7.7-6.6 6.6z" fill="white"></path>
+              </svg>
+          </div>
+          <div class="verified-ring"></div>
+      </div>
+      <div class="text-section">
+          <h1>If you have any project in mind?</h1>
+          <p>DM me now, and let’s create something amazing together! Reach out via email at <a href="mailto:business.shaon121@gmail.com" class="email-link">business.shaon121@gmail.com</a> or click the <a class="hire-button">"Hire Me Now"</a> button to start collaborating on your project. Let’s bring your ideas to life!</p>  
+       <button class="open-popup-btnHHr">Hire Me Now</button>
+      </div>
+  </div>
+</div>
+<!-- Popup Form -->
+<div id="popup-formHHr" class="popup-formHHr">
+<div class="form-containerHHr">
+<button id="close-btnHHr" class="close-btnHHr">✖</button>
+<h2 class="form-titleHHr">Let’s Collaborate on Your Project!</h2>
+<p class="form-descriptionHHr">
+  As a skilled Graphic Designer and WordPress Developer, I specialize in creating visually stunning websites and digital designs. Whether you need a custom WordPress site or a graphic design for your brand, I’m here to help bring your ideas to life. Fill out the form below to get started on your next project with me!
+</p>
+<form id="hire-form" action="https://formspree.io/f/mbljzekd" method="POST">
+  <label for="nameHHr">Your Name</label>
+  <input type="text" id="nameHHr" name="name" placeholder="Enter your name" required>
+  
+  <label for="emailHHr">Your Email</label>
+  <input type="email" id="emailHHr" name="email" placeholder="Enter your email" required>
+  
+  <label for="projectHHr">Project Description</label>
+  <textarea id="projectHHr" name="project" rows="4" placeholder="Tell me about your project" required></textarea>
+  
+  <label for="budgetHHr">Your Budget</label>
+  <textarea id="budgetHHr" name="budget" rows="2" placeholder="What is your budget?" required></textarea>
+
+  <label for="timelineHHr">Project Timeline</label>
+  <textarea id="timelineHHr" name="timeline" rows="2" placeholder="When do you need the project completed?" required></textarea>
+
+  <button type="submit" class="submit-btnHHr">Submit</button>
+</form>
+</div>
+</div>
+
+
+
+<!--Hire Me Button With Image END-->
+
+<!--Image Slider using -->
+
+<div class="ss-wrapper">
+  <!-- Section Title and Description -->
+  <h2 class="ss-title">Explore My Work and Collaborations</h2>
+  <p class="ss-description">
+    This section provides an inside look at my workplace, my team members, client interactions, and the creative process behind the work I do. These images represent the journey and the people I collaborate with every day.
+  </p>
+
+  <!-- Image Gallery Section -->
+  <div class="ss-gallery-slider-container">
+    <div class="ss-gallery-slider">
+      <!-- Slides -->
+      <div class="ss-gallery-slide" style="background-image: url('images/perfect.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('images/2.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('images/3.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('images/4.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('images/5.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('images/1.jpg');"></div>
+    </div>
+    <div class="ss-gallery-thumbnails">
+      <div class="ss-thumbnail" style="background-image: url('images/perfect.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('images/2.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('images/3.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('images/4.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('images/5.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('images/1.jpg');"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--Image Slider using END -->
+
+
+
+  <!--Contact Us Section-->
+
+  <section id="contact" id="contact">
+    <div class="contact-container">
+      <!-- Left Side: Image, Contact Info, and Social Links -->
+      <div class="contact-left">
+        <div class="profile-sectionCN">
+          <h2 class="section-heading">Get in Touch</h2>
+          <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Shaon Kumar Sarker" class="profile-imageCN">
+          <h3>Shaon Kumar Sarker</h3>
+          <p>Graphic Designer & WordPress Developer</p>
+        </div>
+
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> <a
+              href="mailto:business.shaon121@gmail.com" class="mailss" >business.shaon121@gmail.com</a></p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+8801768103942" class="numberss" >+880 1768103942</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/fxQec3zf966978GF7" target="_blank" class="mapsss" >Gopalpur, Mithapukur Rangpur - 5460</a> </p>
+          <p><i class="fas fa-clock"></i> Sat - Thurs: 10:00 AM - 11:00 PM</p>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/shaonkumar.sarker" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/shaonkumarsarkar1" target="_blank"><i class="fab fab fa-facebook"></i></a>
+          <a href="https://www.behance.net/shaonkumarsarker" target="_blank"><i class="fab fa-behance"></i></a>
+          <a href="https://bd.linkedin.com/in/shaonkumarsarker1" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/channel/UCnqTCLmRb7bCwg6Mw27PWug" target="_blank"><i
+              class="fab fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h2 class="form-heading">Contact Me</h2>
+        <p class="form-description">Feel free to reach out for collaborations or any questions. I’ll get back to you as
+          soon as possible!</p>
+
+        <form action="https://formspree.io/f/mrbgabvw" method="POST" class="contact-form">
+          <input type="hidden" name="_redirect"
+            value="E:\WordPress Premium\Custom Code\Personal Webpage\thank-you.html">
+
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)">
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+  </section>
+
+
+  <!--Contact Us Section END-->
+
+  <!--WhatsApp Chat SECTION-->
+
+  <div id="whatsapp-button">
+    <a href="https://wa.me/+8801768103942" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp" />
+    </a>
+  </div>
+
+
+  <!--WhatsApp Chat SECTION END-->
+
+  <!--Footer Section Start -->
+  <footer class="footerCN">
+    <div class="footer-contentCN">
+      <p class="footer-textCN">&copy; 2024 Shaon Kumar Sarker. All rights reserved. | Empowering businesses with
+        innovative digital solutions.</p>
+      <p class="footer-contactCN">Need assistance? <a href="https://wa.me/+8801768103942" target="_blank"
+          class="footer-linkCN">Contact Us</a></p>
+    </div>
+  </footer>
+  <!--Footer Section Start END-->
+
+  <!--Preloading Effect-->
+
+  <div id="preloader">
+    <div class="image-container">
+      <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Preloader Image" class="loader-image">
+    </div>
+    <p id="preloader-title">Loading, Please Wait...</p> <!-- Custom Title -->
+  </div>
+
+  <!--Preloading Effect END-->
+
+  <!--PopUp YouTube Button-->
+
+  <div class="containerYT">
+    <!-- Responsive popup button -->
+    <button id="openModal" class="modern-popup-button">
+      <i class="fas fa-play"></i>
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <iframe id="videoFrame" src="https://www.youtube.com/embed/oA8Ea4qyN5s?si=dQ9I2rXL2ljjixkg" 
+              frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <!--PopUp YouTube Button END-->
+
+  <script src="script.js"></script>
+</body>
+
+</html>

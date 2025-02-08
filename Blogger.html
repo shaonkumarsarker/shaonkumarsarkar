@@ -1,0 +1,3619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Hero Section with Animated Icons</title>
+
+  <!-- Favicon Links -->
+  <link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1TkrphI4nALURGsEm4S-zJsNCjmuOSC__5pMxDT8G2ATDb0IA_wUAmyVLoVTg3lOdzVPf6XJRwhPvQcVBiMTORk4V3M1FDKK6Arbh4U7HdlA5gF_1loprKGXxLmsVkL_N9RVBr10ESjajeaxm_MtrQpXFH0wXmhq4DGCmx0jzNhGvOwDdO1fDIIPnhE8Z/s1600/Visual%20Studio%20Code%20Logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1TkrphI4nALURGsEm4S-zJsNCjmuOSC__5pMxDT8G2ATDb0IA_wUAmyVLoVTg3lOdzVPf6XJRwhPvQcVBiMTORk4V3M1FDKK6Arbh4U7HdlA5gF_1loprKGXxLmsVkL_N9RVBr10ESjajeaxm_MtrQpXFH0wXmhq4DGCmx0jzNhGvOwDdO1fDIIPnhE8Z/s1600/Visual%20Studio%20Code%20Logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1TkrphI4nALURGsEm4S-zJsNCjmuOSC__5pMxDT8G2ATDb0IA_wUAmyVLoVTg3lOdzVPf6XJRwhPvQcVBiMTORk4V3M1FDKK6Arbh4U7HdlA5gF_1loprKGXxLmsVkL_N9RVBr10ESjajeaxm_MtrQpXFH0wXmhq4DGCmx0jzNhGvOwDdO1fDIIPnhE8Z/s1600/Visual%20Studio%20Code%20Logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1TkrphI4nALURGsEm4S-zJsNCjmuOSC__5pMxDT8G2ATDb0IA_wUAmyVLoVTg3lOdzVPf6XJRwhPvQcVBiMTORk4V3M1FDKK6Arbh4U7HdlA5gF_1loprKGXxLmsVkL_N9RVBr10ESjajeaxm_MtrQpXFH0wXmhq4DGCmx0jzNhGvOwDdO1fDIIPnhE8Z/s1600/Visual%20Studio%20Code%20Logo.png">
+  <link rel="manifest" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1TkrphI4nALURGsEm4S-zJsNCjmuOSC__5pMxDT8G2ATDb0IA_wUAmyVLoVTg3lOdzVPf6XJRwhPvQcVBiMTORk4V3M1FDKK6Arbh4U7HdlA5gF_1loprKGXxLmsVkL_N9RVBr10ESjajeaxm_MtrQpXFH0wXmhq4DGCmx0jzNhGvOwDdO1fDIIPnhE8Z/s1600/Visual%20Studio%20Code%20Logo.png">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* Navbar Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent background */
+  padding: 15px 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow effect */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo a {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #27ae60;
+  /* Green color */
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+  color: #2980b9;
+  /* Blue hover effect for logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #27ae60;
+  /* Green background on hover */
+  color: #fff;
+  /* White text on hover */
+  transform: translateY(-3px);
+  /* Subtle hover lift effect */
+}
+
+/* Hire Me Button */
+.hire-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #27ae60;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-left: 40px;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+  /* Soft shadow */
+}
+
+.hire-btn:hover {
+  background-color: #219150;
+  /* Darker green on hover */
+  transform: scale(1.05);
+  /* Slight scale-up effect */
+  box-shadow: 0 6px 12px rgba(39, 174, 96, 0.5);
+  /* Darker shadow */
+}
+
+/* Hamburger Menu (for Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hire-btn {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 3px solid #e2e8f0;
+  padding: 60px 0;
+  padding-top: 120px;
+}
+
+/* Left Section - Text */
+.hero-left {
+  flex: 1;
+  padding-right: 60px;
+  position: relative;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 20px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+  position: relative;
+}
+
+.btn {
+  padding: 16px 35px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-download {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-hire {
+  background-color: #2980b9;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Section - Image */
+.hero-right {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Updated Main Image - Bigger Size */
+.main-image {
+  width: 500px;
+  /* Increased size */
+  height: 500px;
+  /* Increased size */
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.icon-container {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: iconAnimation 3s infinite ease-in-out;
+}
+
+/* Animation for icons */
+@keyframes iconAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  25% {
+    transform: translateY(-10px) scale(1.2);
+  }
+
+  50% {
+    transform: translateY(0) scale(1);
+  }
+
+  75% {
+    transform: translateY(10px) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.icon-container .icon {
+  object-fit: contain;
+}
+
+/* Icon Sizes */
+.icon-small .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-default .icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Icon Positions around Main Image */
+.icon-container.photoshop {
+  top: 20px;
+  left: -40px;
+}
+
+.icon-container.excel {
+  bottom: 30px;
+  right: 30px;
+}
+
+.icon-container.illustrator {
+  top: 10px;
+  right: 60px;
+}
+
+.icon-container.wordpress {
+  top: 150px;
+  left: 10px;
+}
+
+.icon-container.html {
+  top: 150px;
+  right: 10px;
+}
+
+.icon-container.premiere-pro {
+  bottom: 10px;
+  left: 60px;
+}
+
+.icon-container.word {
+  bottom: 10px;
+  right: 60px;
+}
+
+.icon-container.powerpoint {
+  bottom: 100px;
+  left: 20px;
+}
+
+.icon-container.css {
+  bottom: 150px;
+  left: 90px;
+}
+
+/* Responsive Styles for Mobile and Tablet */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-left {
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-image {
+    width: 500px;
+    height: 500px;
+  }
+
+  .icon-container {
+    position: absolute;
+    animation: iconAnimation 3s infinite ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-left p {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .main-image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .icon-container {
+    width: 40px;
+    height: 40px;
+    animation-duration: 4s;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .main-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .icon-container {
+    width: 30px;
+    height: 30px;
+    animation-duration: 5s;
+  }
+}
+
+/*about us*/
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #219150, #d7f4e0);
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Image Box */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f7f2;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Section */
+.about-info {
+  flex: 2;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-info h5 {
+  font-size: 16px;
+  color: #4caf50;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: #219150;
+  margin-bottom: 1px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 5px;
+  padding-bottom: 15px;
+  font-weight: 400;
+}
+
+.intro-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 20px;
+}
+
+.skills-title {
+  font-size: 1.4rem;
+  color: #219150;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.skill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 18px;
+  color: #219150;
+  margin-right: 8px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  padding-top: 4%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.primary-btn {
+  background: #219150;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  background: #197f43;
+}
+
+.secondary-btn {
+  background: #4caf50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn:hover {
+  background: #388e3c;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    /* Center-align for tablet */
+  }
+
+  .profile-image {
+    width: 400px;
+    height: 550px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .subtitle,
+  .intro-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 300px;
+    height: 450px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    justify-content: center;
+    /* Center-align buttons on mobile */
+  }
+}
+
+/* about end*/
+/* Portfolio Section*/
+
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Portfolio Title and Description */
+.portfolio-container h1 {
+  font-size: 36px;
+  color: #27ae60;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeInUp 1s ease-out;
+}
+
+.portfolio-container p {
+  font-size: 18px;
+  text-align: center;
+  color: #777;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Tab Buttons Style */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  padding: 12px 30px;
+  border: 2px solid #27ae60;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #27ae60;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #27ae60;
+  color: white;
+}
+
+/* Portfolio Grid Style */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.portfolio-item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Pagination Style */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background-color: #27ae60;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #1f854c;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+  animation: 0.5s ease-out;
+}
+
+.popup img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.popup-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.popup button {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.popup .download-button {
+  background-color: #27ae60;
+  color: white;
+}
+
+.popup .download-button:hover {
+  background-color: #1f854c;
+}
+
+.popup .cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.popup .cancel-button:hover {
+  background-color: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Portfolio end*/
+
+/*Web Developer Portfolio*/
+
+
+
+
+.holderMM {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.containerMM {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.titleMM {
+  color: #27ae60;
+  font-size: 36px;
+  margin-top: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+  font-weight: bold;
+}
+
+.submm {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.scroll-itemMM {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75);
+}
+
+.scroll-itemMM:nth-child(1) {
+  background: url('https://firebasestorage.googleapis.com/v0/b/wallpaper-85651.appspot.com/o/web1.png?alt=media&token=301b69a3-480b-46d4-af25-b0d24aa9860e');
+  background-size: cover;
+  background-position: top;
+  transition: all 1s ease;
+}
+
+.scroll-itemMM:nth-child(2) {
+  background: url('https://firebasestorage.googleapis.com/v0/b/wallpaper-85651.appspot.com/o/web2.png?alt=media&token=feef438f-b422-425d-bf2d-6ef74b62bbee');
+  background-size: cover;
+  background-position: top;
+  transition: all 1s ease;
+}
+
+.scroll-itemMM:nth-child(3) {
+  background: url('https://firebasestorage.googleapis.com/v0/b/wallpaper-85651.appspot.com/o/web3.png?alt=media&token=ed8d4732-22a7-4f3a-978d-357d68148a32');
+  background-size: cover;
+  background-position: top;
+  transition: all 1s ease;
+}
+
+.scroll-itemMM img {
+  width: 100%;
+  display: block;
+}
+
+.scroll-listMM {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.iconsMM {
+  position: absolute;
+  bottom: -100%;
+  background-color: rgba(39, 174, 96, 0.85);
+  /* Custom Green Color */
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease, background-color 0.3s ease;
+}
+
+.iconsMM:hover {
+  background-color: rgba(41, 128, 185, 0.85);
+  /* Hover effect with a new color (blue) */
+}
+
+.iconsMM button {
+  margin: 0 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.iconsMM button:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge button on hover */
+}
+
+.scroll-itemMM:hover .iconsMM {
+  bottom: 0;
+}
+
+.scroll-itemMM:hover {
+  background-position: bottom;
+}
+
+.btnweb {
+  text-decoration: none;
+  color: #fff;
+  background-color: #27ae60;
+  padding: 18px 30px;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-left: 40px;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+.btnweb:hover {
+  background-color: #219150;
+  /* Darker green on hover */
+  transform: scale(1.05);
+  /* Slight scale-up effect */
+  box-shadow: 0 6px 12px rgba(39, 174, 96, 0.5);
+  /* Darker shadow */
+}
+
+@media screen and (max-width: 992px) {
+  .scroll-listMM {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .scroll-listMM {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
+
+/*Web Developer Portfolio END*/
+
+
+/*cursor start*/
+/* Cursor Dot */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  /* Prevent interactions */
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+}
+
+/* Cursor Outline */
+.cursor-dot-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease;
+  opacity: 0.5;
+  /* Add a slight transparency for effect */
+}
+
+/*cursor End */
+
+/*Back To Top*/
+/* styles.css */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  /* Gradient effect */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  /* Hidden by default */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  /* Larger shadow for more depth */
+  transition: all 0.3s ease;
+  /* Smooth transitions for all effects */
+}
+
+#backToTop i {
+  line-height: 60px;
+  /* Center the icon */
+}
+
+#backToTop:hover {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  /* Reverse gradient on hover */
+  transform: translateY(-5px);
+  /* Lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  /* More prominent shadow on hover */
+}
+
+#backToTop:focus {
+  outline: none;
+  /* Remove outline on focus */
+}
+
+/*Back To Top End  */
+
+/* selected text with a custom color*/
+
+/* Style for selected text */
+::selection {
+  background-color: #27ae60;
+  /* Custom green background */
+  color: #ffffff;
+  /* White text color */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* Subtle text shadow for added depth */
+  border-radius: 5px;
+  /* Rounded corners for selection (optional) */
+}
+
+/* For Webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-selection {
+  background-color: #27ae60;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Optional: Smooth transition effect */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition for selection */
+}
+
+
+/* selected text with a custom color end*/
+
+/*Our Trusted Partners */
+
+.marquee-container {
+  margin-block: 32px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.marquee-mask-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 128px;
+  background: linear-gradient(to right, white 0%, white 40%, transparent 100%);
+  z-index: 2;
+}
+
+.marquee-mask-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 128px;
+  background: linear-gradient(to left, white 0%, white 40%, transparent 100%);
+  z-index: 2;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+}
+
+.logo-slide {
+  display: flex;
+  gap: 100px;
+  padding: 48px 50px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-wrapper img {
+  height: 28px;
+  object-fit: contain;
+}
+
+@media(max-width: 760px) {
+  .logo-wrapper img {
+    height: 24px;
+  }
+
+  .logo-slide {
+    gap: 60px;
+    padding: 24px 32px;
+  }
+}
+
+
+/*Our Trusted Partners END
+
+/*Services Section Start*/
+
+
+/* Service Section */
+.services-sectionCN {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.containerCN {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-titleCN {
+  font-size: 2.5rem;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.section-descriptionCN {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Service Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding-top: 20px;
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-top: 5px solid #27ae60;
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 3rem;
+  color: #fff;
+  background-color: #27ae60;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Service Description */
+.service-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/*Services Section Start END*/
+
+
+/* Blog Section Designed */
+
+
+
+
+
+
+/* Blog Section Designed END */
+
+
+/*Contact Us Section */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Contact Section */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 30px;
+  /* Larger padding */
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  /* Increased width */
+  width: 100%;
+  padding: 40px;
+  /* Larger padding */
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mapsss{
+  text-decoration: none;
+}
+.numberss{
+  text-decoration: none;
+}
+.mailss{
+  text-decoration: none;
+}
+
+/* Left Side: Image, Contact Info, and Social Links */
+.contact-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  /* Larger padding */
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sectionCN {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  /* Larger font size */
+  color: #27ae60;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.profile-imageCN {
+  width: 200px;
+  /* Larger size */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #27ae60;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.profile-imageCN:hover {
+  transform: scale(1.1);
+}
+
+.profile-sectionCN h3 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  /* Larger font */
+  font-weight: 700;
+}
+
+.profile-sectionCN p {
+  font-size: 15px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  /* Increased font size */
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  /* Larger icon size */
+  color: #555;
+}
+
+.social-icons a:hover {
+  color: #27ae60;
+}
+
+/* Right Section: Contact Form */
+.contact-right {
+  width: 50%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+  font-size: 2.5rem;
+  /* Larger heading */
+  color: #27ae60;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-description {
+  font-size: 1.2rem;
+  /* Enhanced description text */
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Larger spacing between form fields */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #27ae60;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #27ae60;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #219150;
+  box-shadow: 0 8px 16px rgba(39, 174, 96, 0.3);
+}
+
+.submit-btn:active {
+  background-color: #1b7d44;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.5);
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #contact {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+}
+
+
+/*Contact Us Section END*/
+
+/* WhatsApp Chat */
+
+#whatsapp-button {
+  position: fixed;
+  /* Makes it sticky */
+  left: 40px;
+  /* Position it to the left side */
+  top: 80%;
+  /* Vertically center it */
+  transform: translateY(-50%);
+  /* Adjust the centering */
+  z-index: 9999;
+  /* Ensure it's above other content */
+  animation: slide-left 1s ease-out forwards, bounce 1.5s infinite alternate;
+  /* Add animations */
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition for hover */
+}
+
+#whatsapp-button img {
+  width: 50px;
+  /* Size of the button */
+  height: 50px;
+  border-radius: 50%;
+  /* Circular shape */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* Shadow effect */
+  transition: transform 0.3s ease;
+  /* Smooth hover effect */
+}
+
+/* Hover effect */
+#whatsapp-button:hover img {
+  transform: scale(1.1);
+  /* Slightly enlarge the button on hover */
+}
+
+/* Slide-in animation */
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100px);
+    /* Start from the left offscreen */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Slide to its position */
+    opacity: 1;
+  }
+}
+
+/* Bounce effect */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+    /* Slight upward movement */
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Optional Tooltip when hovered */
+#whatsapp-button a::after {
+  content: "Chat with us on WhatsApp!";
+  position: absolute;
+  bottom: 80px;
+  /* Adjust the distance of the tooltip */
+  left: 0;
+  background-color: #25D366;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+#whatsapp-button:hover a::after {
+  opacity: 1;
+}
+
+
+/* WhatsApp Chat END */
+
+.footerCN {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  border-top: 4px solid #27ae60;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-contentCN {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-textCN {
+  margin: 0;
+  font-weight: 400;
+}
+
+.footer-contactCN {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.footer-linkCN {
+  color: #27ae60;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/*Preloading Effect */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Light transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+  flex-direction: column;
+  text-align: center;
+  animation: fadeInBackground 1s ease-out forwards;
+}
+
+/* Image Container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader Image with Pulse Effect */
+.loader-image {
+  width: 100px;
+  /* Adjust size */
+  height: 100px;
+  border-radius: 50%;
+  /* Circular image */
+  animation: pulse 2s infinite ease-in-out;
+  /* Pulse animation */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Loading Text Styles */
+#preloader-title {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #27ae60;
+  /* Green color */
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+}
+
+/* Fade-in effect for text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade-in effect for background */
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Content Styles */
+#content {
+  display: none;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  animation: fadeInContent 0.8s ease-out forwards;
+}
+
+/* Fade-in Content Animation */
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hide preloader after page loads */
+.hide-preloader {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Show content after preloader disappears */
+.show-content {
+  display: block;
+}
+
+/*Preloading Effect END*/
+
+/*PopUp YouTube Button*/
+
+
+/* Popup button */
+.modern-popup-button {
+  position: fixed;
+  top: 72%;
+  /* Vertically center */
+  left: 32px;
+  /* Adjust distance from the left edge */
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #27ae60, #1abc9c);
+  /* Gradient effect */
+  color: white;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(39, 174, 96, 0.6), 0 0 30px rgba(39, 174, 96, 0.4);
+  animation: topBottomLoop 2s infinite;
+  /* Top-to-bottom animation */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.modern-popup-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.9), 0 0 40px rgba(39, 174, 96, 0.7);
+}
+
+.modern-popup-button i {
+  font-size: 1.5em;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  /* Default width */
+  max-width: 700px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+iframe {
+  width: 100%;
+  /* Responsive video */
+  height: 350px;
+  /* Default height */
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Keyframes for button animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes topBottomLoop {
+
+  0%,
+  100% {
+    transform: translateY(-55%);
+    /* Move slightly up */
+  }
+
+  50% {
+    transform: translateY(-45%);
+    /* Move slightly down */
+  }
+}
+
+/* Responsive Design */
+
+/* Tablets and small desktops (up to 1024px) */
+@media (max-width: 1024px) {
+  .modern-popup-button {
+    left: 15px;
+    /* Reduce distance from the left */
+    padding: 16px;
+    font-size: 24px;
+  }
+
+  iframe {
+    height: 300px;
+    /* Adjust iframe height */
+  }
+}
+
+/* Mobile phones (up to 768px) */
+@media (max-width: 768px) {
+  .modern-popup-button {
+    left: 10px;
+    /* Reduce left margin */
+    padding: 14px;
+    font-size: 20px;
+    /* Adjust icon size */
+  }
+
+  .modal-content {
+    width: 90%;
+    /* Adjust modal width */
+  }
+
+  iframe {
+    height: 250px;
+    /* Reduce iframe height */
+  }
+}
+
+/* Very small screens (up to 480px) */
+@media (max-width: 480px) {
+  .modern-popup-button {
+    left: 5px;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .modal-content {
+    width: 95%;
+    /* Modal width for tiny screens */
+  }
+
+  iframe {
+    height: 200px;
+    /* Further reduce iframe height */
+  }
+}
+
+
+/*PopUp YouTube Button*/
+
+/*   <!--Hire Me Button With Image--> */
+
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: fadeIn 1s forwards, shadowPulse 3s infinite alternate;
+}
+
+/* Keyframes for Fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Keyframes for Shadow Animation */
+@keyframes shadowPulse {
+  0% {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 15px rgba(39, 174, 96, 0.3);
+  }
+  100% {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 45px rgba(39, 174, 96, 0.5);
+  }
+}
+
+/* Profile Section */
+.profile-sectionhhr {
+  position: relative;
+  min-width: 200px;
+  max-width: 250px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(0.5);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.profile-imagehhr {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #27ae60;
+  transition: all 0.3s ease;
+  animation: shadowColorChange 3s infinite alternate;
+}
+
+@keyframes shadowColorChange {
+  0% {
+      box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
+  }
+  25% {
+      box-shadow: 0 10px 30px rgba(26, 188, 156, 0.3);
+  }
+  50% {
+      box-shadow: 0 10px 30px rgba(46, 204, 113, 0.3);
+  }
+  75% {
+      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+  }
+  100% {
+      box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
+  }
+}
+
+/* Verified Badge */
+.verified-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.verified-badge svg {
+  transition: transform 0.3s ease;
+}
+
+.profile-section:hover .verified-badge {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+}
+
+.verified-badge:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 24px rgba(39, 174, 96, 0.4);
+}
+
+.verified-badge svg {
+  transform: scale(1.2);
+}
+
+/* Verified Ring Animation */
+.verified-ring {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #27ae60;
+  border-radius: 50%;
+  animation: ringAnimation 2s infinite;
+  opacity: 0.6;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+/* Keyframes for Ring Animation Color */
+@keyframes ringAnimation {
+  0% {
+      transform: scale(0);
+      opacity: 0.6;
+      border-color: #27ae60;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.4;
+      border-color: #1abc9c;
+  }
+  100% {
+      transform: scale(0);
+      opacity: 0.6;
+      border-color: #27ae60;
+  }
+}
+
+/* Text Section */
+.text-section {
+  flex: 1;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: slideIn 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 15px 0;
+  opacity: 0;
+  animation: slideIn 0.8s ease-out 0.4s forwards;
+}
+
+.text-section p a {
+  color: #27ae60; /* This removes the default link color */
+  text-decoration: none; /* Removes underline if any */
+}
+
+/* email To Action Button */
+.hire-button {
+font-weight: 600;
+}
+
+
+/* Call To Action Button */
+.open-popup-btnHHr {
+  display: inline-block;
+  background: #27ae60;
+  color: white;
+  border: none; 
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInButton 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes fadeInButton {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.open-popup-btnHHr:hover {
+  background: #218c4f;
+  box-shadow: 0 6px 20px rgba(33, 140, 79, 0.4);
+}
+
+/* Popup Styles */
+.popup-formHHr {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: none;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.5s ease;
+}
+
+.popup-formHHr.show {
+display: flex;
+opacity: 1;
+}
+
+.popup-formHHr.hide {
+opacity: 0;
+}
+
+.form-containerHHr {
+position: relative;
+background: #fff;
+border-radius: 15px;
+padding: 30px;
+width: 80%;
+max-width: 500px;
+box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+overflow-y: auto;
+max-height: 80%;
+animation: shadowGradientHHr 3s infinite ease-in-out;
+}
+
+/* Animated Shadow Gradient for Modern Look */
+@keyframes shadowGradientHHr {
+0% {
+  box-shadow: 0px 8px 25px rgba(39, 174, 96, 0.3), 0px 0px 20px #27ae60;
+}
+50% {
+  box-shadow: 0px 8px 40px rgba(39, 174, 96, 0.5), 0px 0px 35px #27ae60;
+}
+100% {
+  box-shadow: 0px 8px 25px rgba(39, 174, 96, 0.3), 0px 0px 20px #27ae60;
+}
+}
+
+/* Close Button */
+.close-btnHHr {
+position: absolute;
+top: 20px;
+right: 20px;
+background: transparent;
+border: none;
+font-size: 20px;
+color: #888;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+.close-btnHHr:hover {
+color: #27ae60;
+}
+
+.form-titleHHr {
+text-align: center;
+margin-bottom: 15px;
+font-size: 26px;
+color: #27ae60;
+}
+
+.form-descriptionHHr {
+text-align: center;
+margin-bottom: 25px;
+color: #555;
+font-size: 16px;
+}
+
+form label {
+display: block;
+margin: 10px 0 5px;
+font-weight: 600;
+color: #333;
+}
+
+form input,
+form textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 20px;
+border: 1px solid #ddd;
+border-radius: 10px;
+font-size: 16px;
+transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Textarea Shadow Animation */
+form textarea {
+resize: none;
+animation: textareaShadowGradientHHr 2s infinite ease-in-out;
+}
+
+form input:focus,
+form textarea:focus {
+outline: none;
+box-shadow: 0 5px 15px rgba(39, 174, 96, 0.7);
+border-color: #27ae60;
+transform: scale(1.02);
+}
+
+/* Submit Button */
+.popup-formHHr button[type="submit"] {
+width: 100%;
+padding: 12px 20px;
+background-color: #27ae60; /* Your main color */
+color: white;
+border: none; /* Remove border */
+border-radius: 25px;
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+outline: none;
+position: relative;
+box-shadow: 0 0 10px rgba(39, 174, 96, 0.5); /* Outglow effect */
+transition: all 0.3s ease;
+}
+
+.popup-formHHr button[type="submit"]:hover {
+box-shadow: 0 0 15px rgba(39, 174, 96, 0.7); /* Enhanced outglow on hover */
+transform: scale(1.05); /* Slight zoom effect */
+}
+
+.popup-formHHr button[type="submit"]:active {
+box-shadow: 0 0 20px rgba(39, 174, 96, 1); /* Stronger outglow on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.form-containerHHr {
+  padding: 25px;
+  max-width: 90%;
+}
+
+.form-titleHHr {
+  font-size: 22px;
+}
+
+form label {
+  font-size: 14px;
+}
+
+form input,
+form textarea {
+  font-size: 14px;
+}
+
+.submit-btnHHr {
+  font-size: 16px;
+}
+}
+
+
+/*   <!--Hire Me Button With Image END--> */
+
+
+
+/*<!--Image Slider using -->*/
+
+
+/* Wrapper to center the content and gallery */
+.ss-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title and Description inside ss-wrapper */
+.ss-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #27ae60; /* Your color theme */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ss-description {
+  max-width: 1000px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px; /* Space before the gallery */
+  text-align: center;
+}
+
+/* Gallery Slider Container */
+.ss-gallery-slider-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ss-gallery-slider {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ss-gallery-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.ss-gallery-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.ss-gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Wrap thumbnails on smaller screens */
+}
+
+.ss-thumbnail {
+  width: 80px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ss-thumbnail:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.ss-thumbnail.active {
+  border: 2px solid #27ae60;
+}
+
+/* Animation for Background Color and Shadow */
+@keyframes ss-background-shadow-effect {
+  0% {
+    box-shadow: 0 0 20px 5px rgba(39, 174, 96, 0.8); /* Green */
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.8); /* Blue */
+  }
+  100% {
+    box-shadow: 0 0 20px 5px rgba(39, 174, 96, 0.8); /* Back to Green */
+  }
+}
+
+.ss-gallery-slider {
+  animation: ss-background-shadow-effect 6s infinite linear;
+}
+
+/* Thumbnail Active Effect */
+.ss-thumbnail.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .ss-title {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  .ss-description {
+    font-size: 1rem; /* Smaller description text */
+    line-height: 1.4; /* Tightened line-height */
+  }
+
+  .ss-gallery-slider {
+    height: 400px; /* Reduce height for smaller screens */
+  }
+
+  .ss-thumbnail {
+    width: 70px;
+    height: 50px; /* Adjust thumbnail size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .ss-wrapper {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .ss-title {
+    font-size: 1.5rem; /* Even smaller title for very small screens */
+  }
+
+  .ss-description {
+    font-size: 0.9rem; /* Smaller description for mobile */
+    line-height: 1.3; /* Tighter line-height */
+  }
+
+  .ss-gallery-slider {
+    height: 300px; /* Further reduce height for very small screens */
+  }
+
+  .ss-thumbnail {
+    width: 60px;
+    height: 40px; /* Smaller thumbnails for very small screens */
+  }
+}
+
+
+
+
+/*<!--Image Slider using END -->*/
+  
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcgOyayu95avcRl9Yzxxuu07ovBw5eMIEts_RthW7zIFXlU4IF7swByl-WenUEJM911hVnbZf40gMh3NkxcfaZT3uZUOboEXldXvls1702m4LmbSlx01fL5bLNFfYYhfi5QqfYr3zC4BxSSlrWucsNtiQbMVwGe40oTYMyrCjdALVDrB1WBz2OEFNIhZnC/s1600/Logo%20Morden%20Shaon%20Kumar%20Sarkar.png"
+          alt="Shaon Kumar Sarker">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#hire" class="hire-btn">Hire Me</a>
+      <div class="hamburger" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <div class="hero-section" id="home">
+    <div class="container">
+      <!-- Left Section: Text and Buttons -->
+      <div class="hero-left fadeIn">
+        <h1>Graphic Designer & WordPress Developer</h1>
+        <p>Specializing in creative design and seamless website development with WordPress. Bringing your ideas to life
+          with custom solutions and expert design skills.</p>
+        <div class="buttons">
+          <a href="https://drive.google.com/file/d/1_Tor4s83Xqj7m-l2n5RHA6jM0Hn4tOkD/view?usp=sharing" target="_blank" class="btn btn-download">
+            <i class="fa fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-hire">
+            <i class="fa fa-briefcase"></i> Hire Me
+          </a>
+        </div>
+      </div>
+      <!-- Right Section: Main Image and Icons -->
+      <div class="hero-right fadeIn">
+        <div class="image-container">
+          <img class="main-image" src="https://i.ibb.co.com/mB8Lk81/pp.png" alt="Profile Image">
+
+          <!-- Icons around the Image -->
+          <div class="icon-container photoshop icon-default">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/512px-Adobe_Photoshop_CC_icon.svg.png"
+              alt="Photoshop">
+          </div>
+          <div class="icon-container excel icon-small">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png"
+              alt="Excel">
+          </div>
+          <div class="icon-container illustrator icon-default">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/512px-Adobe_Illustrator_CC_icon.svg.png"
+              alt="Illustrator">
+          </div>
+          <div class="icon-container wordpress icon-small">
+            <img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Wordpress-512.png"
+              alt="WordPress">
+          </div>
+          <div class="icon-container html icon-small">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML">
+          </div>
+          <div class="icon-container premiere-pro icon-default">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1051px-Adobe_Premiere_Pro_CC_icon.svg.png"
+              alt="Premiere Pro">
+          </div>
+          <div class="icon-container word icon-small">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/516px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
+              alt="Word">
+          </div>
+          <div class="icon-container powerpoint icon-small">
+            <img class="icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png"
+              alt="PowerPoint">
+          </div>
+          <div class="icon-container css icon-small">
+            <img class="icon" src="https://i.postimg.cc/ZWZjfmR1/pngwing-com.png" alt="CSS">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--About Us Section-->
+  <section class="about-container" id="about">
+    <div class="about-content">
+      <!-- Image Box -->
+      <div class="about-image">
+        <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Shaon Kumar Sarker" class="profile-image">
+      </div>
+      <!-- Info Box -->
+      <div class="about-info">
+        <h5>Hi, I am</h5>
+        <h1 class="title">Shaon Kumar Sarker</h1>
+        <h2 class="subtitle">Graphic Designer & WordPress Developer</h2>
+        <p class="intro-text">
+          I'm a passionate graphic designer and WordPress developer with over 3 years of experience.
+          I specialize in creating stunning designs and innovative solutions using tools like Adobe Photoshop,
+          Illustrator, Premiere Pro, and coding languages like HTML, CSS, and JavaScript.
+        </p>
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <h3 class="skills-title">My Skills</h3>
+          <div class="skills">
+            <div class="skill"><i class="fas fa-pencil-ruler skill-icon"></i> Graphic Design</div>
+            <div class="skill"><i class="fab fa-wordpress skill-icon"></i> WordPress</div>
+            <div class="skill"><i class="fas fa-code skill-icon"></i> HTML/CSS/JS</div>
+            <div class="skill"><i class="fas fa-camera skill-icon"></i> Photography</div>
+            <div class="skill"><i class="fas fa-chart-line skill-icon"></i> Digital Marketing</div>
+            <div class="skill"><i class="fas fa-brush skill-icon"></i> UI/UX Design</div>
+            <div class="skill"><i class="fas fa-palette skill-icon"></i> Branding</div>
+            <div class="skill"><i class="fas fa-box skill-icon"></i> E-Commerce Development</div>
+            <div class="skill"><i class="fas fa-pencil-alt skill-icon"></i> Content Creation</div>
+        </div>        
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+          <a href="https://drive.google.com/file/d/1_Tor4s83Xqj7m-l2n5RHA6jM0Hn4tOkD/view?usp=sharing" target="_blank" class="btn primary-btn"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#contact" class="btn secondary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--About Us Section End-->
+
+ <!--My Our Trusted Partners-->
+
+
+ <div class="marquee-container">
+  <div class="marquee-mask-left"></div>
+  <div class="marquee-mask-right"></div>
+
+  <div class="marquee-track" id="track">
+    <div class="logo-slide">
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYo6DeixOBU-1tVaujwQtlhOWoqPnZkAWd2e0cBek8WvFHpA7UB-BWY3mioBBXQubri0PLw6Q9qvT2OkdQlHcPrtVNQifxHwCS_yN82nszHHovMFCwvGT5obo1q6uNgzndtQWbqQGtXD_EdX38EVuwwwwkNn9wyU3SQ79kHAxku8LkEwcbFfEdWJuP1_ie/s320/adobe-photoshop-logo.png" alt="Company 1" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyYd7C215xnS1ieJqBfkLQkVIh0OIU3HsuFeFw6Xu9qDZgBf2tmBzBnSelclvCSKQoGTQnEkQT95ehGAbiyMkR5jt9vYZ9kWFqnluPWfRt0A2vLEldtw97X3TWMtnNuDtzLNuQH6D54i6RZhZfmttoFGHjPNv1sk5arGQ_ySqeRRopPVJuyNeyrdJ36Fop/s320/adobe-lightroom-icon.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiejBxaov5ZI1QzEQ8DvQENy302HQhT6-AThNd4PjkmFwOVpd3deDCniQ9QxcqmOKKJSh7R1z4pv3hxX5K4fGI9QdGttItQoZ4JesJszF8rfHgJPTvz06gJl19ChnixmSuZY1fzOdexLiAtUy4amQaJ3pUm3OPPybUnn2m-hATiDYzYFSXR60fKXQB3s654/s1600/Adobe%20Xd%20Logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8joPZTQGY7T9bdkqsV7te86mzdh4f4qDwvOtOfn_ohtelM9bbVIdP6TLxljJopZl51jZp0IUkjHP8tqoboTUzTyIT4zr-ktMbbuc_8UVLOadx-efnKU5jy8oAvp72c9-l8TpZVes6SKBYsJI9Vbyd-9mIn938abstqq3ZCzQ0dKIipvwE8i0By-Y_vh4F/s1600/Adobe%20Premiere%20Logo.png" alt="Company 3" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8lR9hjpOfzpTZAaLOPBlEAuibe4XbC7JdXMTS6ZiWWtkKOAYMlt8LVmxkt2V3qWL_kcqa773DuLbwPreQn1twq6tpauGa-C-QR6rh77V4XVc07XXTh3ZtlpAONQSCyli3kWOM5TGvfPVU6fTfQyKCnEmgoy55BONsrYzRVNtqVhhzAl5bI8YcdMh_BJqh/s1600/Adobe%20InDesign%20Logo.png" alt="Company 4" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj550o_7Y6qm9dcBvt2tVLiAw3dlirAY-qV_wctr2HOj0E8KTzR-9NHZn_xqMQSZr85pWn9qtN3RmIaf-r_gGkfFaR48lAszVEF-JHTt3XSmpvotk_C4W3-S4vaGCKlH7345zoeivpV6OK6hM9qCho9G8D12EyfiCqDwky1_toRqCSWsBwpnzgbCpEamjy6/s1600/Adobe%20Illustrator%20Logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMiGK9cMeEhEYdVpp6qi2y4kxN4V8VDv-91yetHYXhDMTs8XUYe1gq2Olwlarss9K563abcwen7-elVv5UwfriL3FqVNbC0D6zTHSnlPo9dz3d_1EPorATmgmATOGZpqSJGkD50TNXUpOVBwGc_cgd_FDlfaMcNg6eWpRjRF-1eF1LNj_Jlu5gAQam43J5/s1600/Adobe%20After%20Effects%20Logo.png" alt="Company 5" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj550o_7Y6qm9dcBvt2tVLiAw3dlirAY-qV_wctr2HOj0E8KTzR-9NHZn_xqMQSZr85pWn9qtN3RmIaf-r_gGkfFaR48lAszVEF-JHTt3XSmpvotk_C4W3-S4vaGCKlH7345zoeivpV6OK6hM9qCho9G8D12EyfiCqDwky1_toRqCSWsBwpnzgbCpEamjy6/s1600/Adobe%20Illustrator%20Logo.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4gYtL9mI3oUPOEj5KhGoUS-tSEDDDo4BNU-S-S0iE46So7vozY6QRQ0Uw8EA2-VXadpcdnzU20VhSj0Ry0vOIrfw1ZjlhMRfg6G-lYR3T478PH26TXzRybsVN-OU6dxVsui_KAdF7j4_Rrc9nVRyGZ5Wh79ZutdPQIhJHIbFdvCg91uMzGxVQthx5BWJ7/s320/1656737543fiverr-png.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq4B9kttbfx3UgEnosCsESBwwMvhA_Qzv4TvoEha6xY38LUHpkoshN0tRcmur1-3qo14FeKSLnx7DlIlx-DJSgcdxF4yypFtse1WCScREbul_NLejscaolOCqH_iMAK5sZbH25u9qnWnNd4o8QC7PlPX5OB_LshMc52PyMNXxwyQW1vEuZd7v2JPRftscl/s320/Blogger_logo.svg.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-oEVpwOdUCot5HmwJEattnU5HfFk9ZFZGlopMp7PR5ITySW09VhKwWuEussIcexp6y1TAJxXTRy12dqnK2oKOXOmZv0RjuTVIGVy9pdz0-jZMvBSd0N2pJ8D2vfF2JXOvDMpk153ZhodFOe-ONCCWh44ZhqI9XarYlAUvizUr1bu7K3XVdzgpTQAY4uQl/s320/Freelancer%20Logo.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmryB4NIbml67VjlIYynC_keU8fco9I1OqP77qZ9udAdL-YBb11PzOsun7OAULzuTsF5X7K8BXXOU_PEYnV63Y-tR0fKdFJMBD1_qsZxpX8eGWfQFu-bOJAqqNX6_NHbKbNERWBpBYhzNYrKu80-J7Ykt7dqIuf94YErxNUEvqdDnF6AA3STtwZOf2LEvd/s1600/Upwork%20Logo.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiJDbl-9wvGYe3xYo4zCCoqxdoCUqJKJM7REk9jyZosIeGsg0xN_l7wYWOHDczRXjGKrgXgscjKWNkt_h5bHeMnBOa3WWzfrDatMoCwPm6Tc0jCUNyaj4eAU57pocjdihcAu7gptvPM4Bxj5_tTKfa9S2iWY3Vnl-RrwjPjiSqohQrgPg8uJmep2YSD4MF/s320/wordpress-logo.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhanKNxdpBD9QG8aK7Zk0UwJj0t2sgrBlXu6SAngKbDvv4dtY6MPyyQIpNV4-lzF4zDVh2ukBjzqG55MKRSHxp8l3W_tOJlj_hfPwYTNTmXEZ0fiil9JFhOCQVYQA3thtBstL-Cjb7nE3nFcFRjzCJvfJXgZNmfpU9PfpxU2PaTPNb7wwkX7w8eb9sHZElM/s1600/Elementor%20Logo.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2XMxkhmGJR3H4I3fjb3VyAHQezqWELXj3K_JzXC9BEPMGKewhDB9foU8UmMqV0Wuz0s8Q4yQRy8RnP03QLXgSZYbr7FkuKvJR_49vTm2KwdhOKUfNrNJ_tACNoVDfiH78uJrA1UKYtBN0WjVQFJn_FR-2vw_4y-KEoFGs1ZK-hAVQK4toSf8yOJziygk7/s1600/Woocommerce%20Logo.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghrQSE8GJZGtD_9wo_Ayq8D3VFln7EhZcbW5IAtMf2xK2jvO7_bM9cpWu3DHcnKpdLP8vaaBmAeq4EF937TScTp6WHhMQ7PfyE_f8y-rcpN_WX6JuIGYLd7ACpmWJKRLwjhyphenhyphenA92VydIw9QUoYVRdgIlss0ffAZ3NoP0GhbZAPpXKewqbup_lK2cBhpraF6/s320/YouTube-Logo.wine.png" alt="Company 2" class="logo" />
+      </div><div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn8xn5EvYdbllO0CPNcsP8Jqv5RaS-JKq8MPIaFr8m5U-YM49v6wJcOM5LKpfiAv-stIMgZaaQMHcS9Hs8FTINiaRihavaI_vmFlYgNg3RXUz-HjvA5uZO7y0lmpzIryKoJcUjMpyvLEsLyHHoEnOtJ9ULVbm-AIsvVDE6UJ28bOr4yoBLoGZMtRoioB__/s1600/Payoneer%20New%20Logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnykWmq1v4TD9VvvJvciWC_JacfEqZn0F-BkBDr6Jtvi_xkoRsqU3Y856gMPzVwVTPGXH-68u00zWHHJyzSNar2ulB0lneZ9l3b_DbFbeOIQkgeeTbz0HzLg0kb6E2uIbo8sN3XqnM5XsRteSMZktzoVb4K9Pv1LK8gmkdK8rwG3rYZzaNZYY2mx4Ic5u6/s1600/linkedin-logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYOV_CPSiLT3OEI6D0dAwfFl4oFUKpstrokbJcEE6n8bj2GhjWob-ID0sIcKAQ9ZQi201ygt4M2e3xgJoXh0_O1Gkyl5-ohrAUb5jNcaBwqtl4i-Nkm6IlD31Rl8J8KcJeNMYFGccJduYAYxpniodJDv-88-6973r1tYe6d7ltAvJ968K-JQLYG8aRftWb/s1600/facebook-logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0LPpxwc29XiMbtVYtKx9hmMqI34GR7mdFy0dLVhWJ7JfzNaJbzULdbPUDAtLNxxU19hZtNvcABRFWLds1a3kziphmRaIsrhSjJ9qHoAN87i8n82EFyUFh4bvrg1lj3BCZkus_234cOvgNzQ9I5aCS9vzhTSpu8KnFC5dIfWpHozN8e0l30YbMQy_z3YTM/s1600/pinterest-logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT82HX5bGL6EsyG_kxer9S2_IXCbgJMBTsGW2EdDn49qPXW64vha1aipYBySvhuUZAgyUOVPoruSqEDsHkkishxQRtJBwGSEephKQ7_c-QaGV9bW_eWkFleIcBkRXlY68d3LFtcEzXHuk7v_tcq0yDL-Z92F5RVE8FEouNkXULKAkrN_YjeM9xtCQybMGT/s320/Canva%20New%20Logo.png" alt="Company 2" class="logo" />
+      </div>
+      <div class="logo-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX3ia7s1tXCN3nEv-OY_MU-x6r3Yza03A074vMgkT1wkVDThi2OVinIe1VgQr9oLbLy9fnNZ47GDCiMWUaYmJdEaOBDqC281VkVkD0rY6bQoRYt8QdeJ8Yr-LpgiC3NoXoC84xN7KXWHm7IF7IZvtY9gNaPLoVlEiCAovEYg07plHjiFXjfez44qLONNsT/s320/Semrush-logo.png" alt="Company 2" class="logo" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--My Our Trusted Partners END-->
+
+  <!--Portfolio Section-->
+  <!-- Paste the HTML code for the portfolio container, tabs, grid, and popup here -->
+  <div class="portfolio-container" id="portfolio">
+    <h1>My Creative Portfolio</h1>
+    <p>Explore my creative graphic design projects, where art meets functionality to deliver impactful visuals and stunning designs.</p>
+
+    <div class="tab-buttons">
+      <button class="tab-button active" data-tab="all">All</button>
+      <button class="tab-button" data-tab="post-design">Post Design</button>
+      <button class="tab-button" data-tab="youtube-design">YouTube Thumbnail</button>
+      <button class="tab-button" data-tab="business-card">Business Card</button>
+    </div>
+
+    <div class="portfolio-grid"></div>
+
+    <div class="pagination">
+      <button class="prev-button" disabled>❮ Prev</button>
+      <button class="next-button">Next ❯</button>
+    </div>
+  </div>
+
+  <div class="popup">
+    <div class="popup-content">
+      <img src="" alt="Popup Image">
+      <p class="popup-title"></p>
+      <button class="download-button">Download</button>
+      <button class="cancel-button">Cancel</button>
+    </div>
+  </div>
+  <!--Portfolio Section End-->
+
+
+  <!--Scrolling Website Porfolio Image-->
+
+
+  <section>
+
+    <div class="holderMM">
+      <div class="containerMM">
+        <h1 class="titleMM">Explore Stunning Website Templates</h1>
+        <p class="submm">Discover a collection of high-quality, responsive website templates designed to fit any
+          need.<br> Perfect for businesses, portfolios, blogs, and more!</p>
+        <div class="scroll-listMM">
+          <div class="scroll-itemMM">
+            <div class="iconsMM">
+              <a href="https://demo-link1.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </a>
+              <a href="https://demo-link2.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="scroll-itemMM">
+            <div class="iconsMM">
+              <a href="https://demo-link1.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </a>
+              <a href="https://demo-link2.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="scroll-itemMM">
+            <div class="iconsMM">
+              <a href="https://demo-link1.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </a>
+              <a href="https://demo-link2.com" target="_blank">
+                <button type="buttonMM">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="buttonsweb">
+            <a href="#" target="_blank" text-align: center; class="btnweb primary-btn"></i> View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Scrolling Image END-->
+
+
+
+
+  <!--cursor-->
+  <div class="cursor-dot"></div>
+  <div class="cursor-dot-outline"></div>
+  <!--cursor-->
+
+  <!--Back To Top-->
+  <button id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <!--Back To Top End-->
+
+
+
+  <!--Services Section-->
+
+  <!-- Your Services Section -->
+  <section class="services-sectionCN" id="services">
+    <div class="containerCN">
+      <h2 class="section-titleCN">Our Expertise</h2>
+      <p class="section-descriptionCN">
+        Transforming ideas into impactful solutions. Explore our professional services.
+      </p>
+      <div class="services-grid">
+
+        <!-- Service Item 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 class="service-title">Graphic Design</h3>
+          <p class="service-description">
+            High-quality branding, logos, and print designs tailored to your vision.
+          </p>
+        </div>
+
+        <!-- Service Item 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-title">WordPress Development</h3>
+          <p class="service-description">
+            Custom websites that are fast, responsive, and optimized for SEO.
+          </p>
+        </div>
+
+        <!-- Service Item 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="service-title">Photography</h3>
+          <p class="service-description">
+            Capturing moments with creativity and delivering polished edits.
+          </p>
+        </div>
+
+        <!-- Service Item 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-description">
+            Result-driven strategies for SEO, social media, and online campaigns.
+          </p>
+        </div>
+
+        <!-- Service Item 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-description">
+            Designing intuitive interfaces and seamless digital experiences.
+          </p>
+        </div>
+
+        <!-- Service Item 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-description">
+            Engaging edits with professional motion graphics and effects.
+          </p>
+        </div>
+
+        <!-- Service Item 7 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="service-title">eCommerce Solutions</h3>
+          <p class="service-description">
+            Build seamless online stores with payment integration and great UX.
+          </p>
+        </div>
+
+        <!-- Service Item 8 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-pen-fancy"></i>
+          </div>
+          <h3 class="service-title">Content Creation</h3>
+          <p class="service-description">
+            Engaging blogs, videos, and social media content for your audience.
+          </p>
+        </div>
+
+        <!-- Service Item 9 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="service-title">Analytics & Reporting</h3>
+          <p class="service-description">
+            Data-driven insights and performance reports to optimize your strategies.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Services Section ENd-->
+
+
+
+
+  <!--Blog Section Designed-->
+
+
+
+  <!--Blog Section Designed END-->
+
+
+<!--Hire Me Button With Image-->
+
+
+  
+<div id="hire" class="cta-section">
+  <div class="cta-container">
+      <div class="profile-sectionhhr">
+          <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Profile Picture" class="profile-imagehhr">
+          <div class="verified-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16px" height="16px">
+                  <circle cx="12" cy="12" r="12" fill="#27ae60"></circle>
+                  <path d="M10.5 16.3l-3.3-3.3.7-.7 2.6 2.6 5.9-5.9.7.7-6.6 6.6z" fill="white"></path>
+              </svg>
+          </div>
+          <div class="verified-ring"></div>
+      </div>
+      <div class="text-section">
+          <h1>If you have any project in mind?</h1>
+          <p>DM me now, and let’s create something amazing together! Reach out via email at <a href="mailto:business.shaon121@gmail.com" class="email-link">business.shaon121@gmail.com</a> or click the <a class="hire-button">"Hire Me Now"</a> button to start collaborating on your project. Let’s bring your ideas to life!</p>  
+       <button class="open-popup-btnHHr">Hire Me Now</button>
+      </div>
+  </div>
+</div>
+<!-- Popup Form -->
+<div id="popup-formHHr" class="popup-formHHr">
+<div class="form-containerHHr">
+<button id="close-btnHHr" class="close-btnHHr">✖</button>
+<h2 class="form-titleHHr">Let’s Collaborate on Your Project!</h2>
+<p class="form-descriptionHHr">
+  As a skilled Graphic Designer and WordPress Developer, I specialize in creating visually stunning websites and digital designs. Whether you need a custom WordPress site or a graphic design for your brand, I’m here to help bring your ideas to life. Fill out the form below to get started on your next project with me!
+</p>
+<form id="hire-form" action="https://formspree.io/f/mbljzekd" method="POST">
+  <label for="nameHHr">Your Name</label>
+  <input type="text" id="nameHHr" name="name" placeholder="Enter your name" required>
+  
+  <label for="emailHHr">Your Email</label>
+  <input type="email" id="emailHHr" name="email" placeholder="Enter your email" required>
+  
+  <label for="projectHHr">Project Description</label>
+  <textarea id="projectHHr" name="project" rows="4" placeholder="Tell me about your project" required></textarea>
+  
+  <label for="budgetHHr">Your Budget</label>
+  <textarea id="budgetHHr" name="budget" rows="2" placeholder="What is your budget?" required></textarea>
+
+  <label for="timelineHHr">Project Timeline</label>
+  <textarea id="timelineHHr" name="timeline" rows="2" placeholder="When do you need the project completed?" required></textarea>
+
+  <button type="submit" class="submit-btnHHr">Submit</button>
+</form>
+</div>
+</div>
+
+
+
+<!--Hire Me Button With Image END-->
+
+<!--Image Slider using -->
+
+<div class="ss-wrapper">
+  <!-- Section Title and Description -->
+  <h2 class="ss-title">Explore My Work and Collaborations</h2>
+  <p class="ss-description">
+    This section provides an inside look at my workplace, my team members, client interactions, and the creative process behind the work I do. These images represent the journey and the people I collaborate with every day.
+  </p>
+
+  <!-- Image Gallery Section -->
+  <div class="ss-gallery-slider-container">
+    <div class="ss-gallery-slider">
+      <!-- Slides -->
+      <div class="ss-gallery-slide" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfyovmoipQJCUk1TB_DiDLJnH4Wnp9zOLF64phvR247pHmJkCijVBqrexgaf6hzTWwSELNxDD1ahlequI5Ti-GtEycEU6guGrFNF8IXQHIrY4W9Z2cMUEDbVEiy8QqOmfOP02F0Ie-SYLkXmUPfheC8iqNiFdIlqPxtgb5mYkeUmhT5AkUo6FT2-jlPTb3/s16000/4.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUfmeiOuCU_lSGVIjAJN8_Rd6kNQSfOLbnyRAaH_f-J3_3VFuEW_JzEAg09yNAixXao1a2EUE-siEAhiBgYQGC7-bSi6265m7JC6pBIFAxispdH1cpjW8Ns-dr1R_6v0HvnUvV46kqOdhO8iMrQlckIxnDULLApFoua45gYAJftL1Jhiw3JUn7I1BOxqUh/s16000/5.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0GqpRFZ3LvjWsHSozKH1xyprRgSazSNbUd5NqCXQUTNs_hD-3y2xA997wmvNG1VvRce5CSxKTwC-gonxdFaq5jRiggEO1mAXOn-Bm6PDeC0JrXudlOD18ZJrShciZb-9jYz7q9p6GKegY6Le3HdZYKBwkFyTsjTFIXLZnlfwCnLfXISCindfkZmbl_xMj/s16000/perfect.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzbeChE08Mg6Y8gEV911GWneM1uF5Sjyrb59RnoDUawt-2Cbnzok8Wo7sxLDDBJgzQXbP0hG7xE5IYogvNdt8_vhec06Y3NghXztLwj7Jb4DDwJ4Q8i1YyORZiY0by0_jJtGOH6yKvLEK-s_V1VQPpchnHI8c5n9aqWr-M_0YI46KJHySUIOZT3sLPLZ4L/s16000/2.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMiZaUsR0lBeoC5Of_Nkr6caamyD2S8YF07qE4sLzbKdJPxNa-PqdPpfaLI1GUxF8e1Ny3XuHLRp9Kdn9ND7hUWcxYCVcehsSWtJK-TfAiuZbHfKK3KVg1UewX4T3QVdBveEubIVdSx4RofurHlFMb9t7Oxgv4wRDHlD3DUMeH9RPR2dvqXHga6xIj18Go/s16000/3.jpg');"></div>
+      <div class="ss-gallery-slide" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9_nwn4W8bV1eeRw5KA0xLOavUTzCZe-rmJzVuS6BIEvDTwvmhANwRblWYN8u4dMPs04RKL_oS6ZiXrAQpxJqdhrYpwGnNRJJS2Z5Hefsj5MbgQMFu3QO8rR78rsYDAtgQ1MnufFkibxcNvuN7MLavDQJyPunmZLhKDlY43ZSwXLCUycK7MCTHjGQgMs3H/s16000/1.jpg');"></div>
+    </div>
+    <div class="ss-gallery-thumbnails">
+      <div class="ss-thumbnail" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfyovmoipQJCUk1TB_DiDLJnH4Wnp9zOLF64phvR247pHmJkCijVBqrexgaf6hzTWwSELNxDD1ahlequI5Ti-GtEycEU6guGrFNF8IXQHIrY4W9Z2cMUEDbVEiy8QqOmfOP02F0Ie-SYLkXmUPfheC8iqNiFdIlqPxtgb5mYkeUmhT5AkUo6FT2-jlPTb3/s16000/4.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUfmeiOuCU_lSGVIjAJN8_Rd6kNQSfOLbnyRAaH_f-J3_3VFuEW_JzEAg09yNAixXao1a2EUE-siEAhiBgYQGC7-bSi6265m7JC6pBIFAxispdH1cpjW8Ns-dr1R_6v0HvnUvV46kqOdhO8iMrQlckIxnDULLApFoua45gYAJftL1Jhiw3JUn7I1BOxqUh/s16000/5.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0GqpRFZ3LvjWsHSozKH1xyprRgSazSNbUd5NqCXQUTNs_hD-3y2xA997wmvNG1VvRce5CSxKTwC-gonxdFaq5jRiggEO1mAXOn-Bm6PDeC0JrXudlOD18ZJrShciZb-9jYz7q9p6GKegY6Le3HdZYKBwkFyTsjTFIXLZnlfwCnLfXISCindfkZmbl_xMj/s16000/perfect.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzbeChE08Mg6Y8gEV911GWneM1uF5Sjyrb59RnoDUawt-2Cbnzok8Wo7sxLDDBJgzQXbP0hG7xE5IYogvNdt8_vhec06Y3NghXztLwj7Jb4DDwJ4Q8i1YyORZiY0by0_jJtGOH6yKvLEK-s_V1VQPpchnHI8c5n9aqWr-M_0YI46KJHySUIOZT3sLPLZ4L/s16000/2.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMiZaUsR0lBeoC5Of_Nkr6caamyD2S8YF07qE4sLzbKdJPxNa-PqdPpfaLI1GUxF8e1Ny3XuHLRp9Kdn9ND7hUWcxYCVcehsSWtJK-TfAiuZbHfKK3KVg1UewX4T3QVdBveEubIVdSx4RofurHlFMb9t7Oxgv4wRDHlD3DUMeH9RPR2dvqXHga6xIj18Go/s16000/3.jpg');"></div>
+      <div class="ss-thumbnail" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9_nwn4W8bV1eeRw5KA0xLOavUTzCZe-rmJzVuS6BIEvDTwvmhANwRblWYN8u4dMPs04RKL_oS6ZiXrAQpxJqdhrYpwGnNRJJS2Z5Hefsj5MbgQMFu3QO8rR78rsYDAtgQ1MnufFkibxcNvuN7MLavDQJyPunmZLhKDlY43ZSwXLCUycK7MCTHjGQgMs3H/s16000/1.jpg');"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--Image Slider using END -->
+
+
+
+  <!--Contact Us Section-->
+
+  <section id="contact" id="contact">
+    <div class="contact-container">
+      <!-- Left Side: Image, Contact Info, and Social Links -->
+      <div class="contact-left">
+        <div class="profile-sectionCN">
+          <h2 class="section-heading">Get in Touch</h2>
+          <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Shaon Kumar Sarker" class="profile-imageCN">
+          <h3>Shaon Kumar Sarker</h3>
+          <p>Graphic Designer & WordPress Developer</p>
+        </div>
+
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> <a
+              href="mailto:business.shaon121@gmail.com" class="mailss" >business.shaon121@gmail.com</a></p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+8801768103942" class="numberss" >+880 1768103942</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/fxQec3zf966978GF7" target="_blank" class="mapsss" >Gopalpur, Mithapukur Rangpur - 5460</a> </p>
+          <p><i class="fas fa-clock"></i> Sat - Thurs: 10:00 AM - 11:00 PM</p>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/shaonkumar.sarker" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/shaonkumarsarkar1" target="_blank"><i class="fab fab fa-facebook"></i></a>
+          <a href="https://www.behance.net/shaonkumarsarker" target="_blank"><i class="fab fa-behance"></i></a>
+          <a href="https://bd.linkedin.com/in/shaonkumarsarker1" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/channel/UCnqTCLmRb7bCwg6Mw27PWug" target="_blank"><i
+              class="fab fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h2 class="form-heading">Contact Me</h2>
+        <p class="form-description">Feel free to reach out for collaborations or any questions. I’ll get back to you as
+          soon as possible!</p>
+
+        <form action="https://formspree.io/f/mrbgabvw" method="POST" class="contact-form">
+          <input type="hidden" name="_redirect"
+            value="E:\WordPress Premium\Custom Code\Personal Webpage\thank-you.html">
+
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)">
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+  </section>
+
+
+  <!--Contact Us Section END-->
+
+  <!--WhatsApp Chat SECTION-->
+
+  <div id="whatsapp-button">
+    <a href="https://wa.me/+8801768103942" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp" />
+    </a>
+  </div>
+
+
+  <!--WhatsApp Chat SECTION END-->
+
+  <!--Footer Section Start -->
+  <footer class="footerCN">
+    <div class="footer-contentCN">
+      <p class="footer-textCN">&copy; 2024 Shaon Kumar Sarker. All rights reserved. | Empowering businesses with
+        innovative digital solutions.</p>
+      <p class="footer-contactCN">Need assistance? <a href="https://wa.me/+8801768103942" target="_blank"
+          class="footer-linkCN">Contact Us</a></p>
+    </div>
+  </footer>
+  <!--Footer Section Start END-->
+
+  <!--Preloading Effect-->
+
+  <div id="preloader">
+    <div class="image-container">
+      <img src="https://i.ibb.co/mB8Lk81/pp.png" alt="Preloader Image" class="loader-image">
+    </div>
+    <p id="preloader-title">Loading, Please Wait...</p> <!-- Custom Title -->
+  </div>
+
+  <!--Preloading Effect END-->
+
+  <!--PopUp YouTube Button-->
+
+  <div class="containerYT">
+    <!-- Responsive popup button -->
+    <button id="openModal" class="modern-popup-button">
+      <i class="fas fa-play"></i>
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <iframe id="videoFrame" src="https://www.youtube.com/embed/oA8Ea4qyN5s?si=dQ9I2rXL2ljjixkg" 
+              frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <!--PopUp YouTube Button END-->
+
+  <script>
+
+
+// JavaScript for toggling the menu
+function toggleNav() {
+	const navLinks = document.querySelector('.nav-links');
+	navLinks.classList.toggle('active');
+}
+const items = [
+    { category: 'post-design', image: 'https://img.freepik.com/premium-psd/digital-marketing-new-web-banner-website-poster-marketing-services-digital-marketing-agency-web_928674-71.jpg?w=826', title: 'Digital marketing web agency.', link: 'https://www.freepik.com/premium-psd/digital-marketing-new-web-banner-website-poster-marketing-services-digital-marketing-agency-web_133263449.htm#fromView=author&page=1&position=50&uuid=029fe6f9-bdd8-4316-b052-f499a56c4caa' },
+    { category: 'post-design', image: 'https://img.freepik.com/premium-psd/free-digital-marketing-agency-social-media-post-design-psd-template-digital-marketing-poster_928674-107.jpg?w=826', title: 'Digital marketing agency social media post design', link: 'https://www.freepik.com/premium-psd/free-digital-marketing-agency-social-media-post-design-psd-template-digital-marketing-poster_159596562.htm#from_view=detail_alsolike' },
+    { category: 'post-design', image: 'https://img.freepik.com/premium-psd/digital-marketing-post-psd-template-free-download-digital-marketing-social-media-post_928674-105.jpg?w=826', title: 'Digital marketing post psd template', link: 'https://www.freepik.com/premium-psd/digital-marketing-post-psd-template-free-download-digital-marketing-social-media-post_158078508.htm#fromView=author&page=1&position=9&uuid=029fe6f9-bdd8-4316-b052-f499a56c4caa' },
+    { category: 'youtube-design', image: 'https://img.freepik.com/premium-psd/free-psd-new-modern-glow-effect-youtube-thumbnail-designa-poster-video-called-no-business_928674-422.jpg?w=1380', title: 'Modern glow effect Youtube Thumbnail Design', link: 'https://www.freepik.com/premium-psd/free-psd-new-modern-glow-effect-youtube-thumbnail-designa-poster-video-called-no-business_387793084.htm#fromView=author&page=1&position=27&uuid=029fe6f9-bdd8-4316-b052-f499a56c4caa' },
+    { category: 'youtube-design', image: 'https://img.freepik.com/premium-psd/free-premium-quality-psd-poster-woman-with-picture-woman-with-big-smile-her-face_928674-426.jpg?w=1380', title: 'Modern glow effect Youtube Thumbnail Design', link: 'https://www.freepik.com/premium-psd/free-premium-quality-psd-poster-woman-with-picture-woman-with-big-smile-her-face_387793272.htm#fromView=author&page=1&position=28&uuid=029fe6f9-bdd8-4316-b052-f499a56c4caa' },
+    { category: 'youtube-design', image: 'https://img.freepik.com/premium-psd/man-with-beard-glasses-is-looking-man-with-glasses-his-face_928674-424.jpg?w=1380', title: 'Modern glow effect Youtube Thumbnail Design', link: 'https://img.freepik.com/premium-psd/man-with-beard-glasses-is-looking-man-with-glasses-his-face_928674-424.jpg?w=1380' },
+    { category: 'business-card', image: 'https://img.freepik.com/premium-psd/business-card-with-green-blue-background-that-says-business-card_928674-163.jpg?w=740', title: 'Modern and clean business card', link: 'https://www.freepik.com/premium-psd/business-card-with-green-blue-background-that-says-business-card_259133666.htm#fromView=author&page=1&position=23&uuid=029fe6f9-bdd8-4316-b052-f499a56c4caa' },
+    { category: 'business-card', image: 'https://img.freepik.com/premium-vector/modern-clean-business-card-free-vector-blue-yellow-visiting-card-template-id-card-designer_928674-94.jpg?w=826', title: 'Modern and clean business card', link: 'https://www.freepik.com/premium-vector/modern-clean-business-card-free-vector-blue-yellow-visiting-card-template-id-card-designer_149699038.htm#fromView=author&page=1&position=0&uuid=b65e99d7-0022-4d8f-81b8-dc63da649d8e' },
+    { category: 'business-card', image: 'https://img.freepik.com/premium-psd/business-card-with-red-white-background-that-says-business-card_928674-157.jpg?w=740', title: 'A business card with a red and white background that says business card', link: 'https://www.freepik.com/premium-psd/business-card-with-red-white-background-that-says-business-card_259133570.htm#fromView=author&page=1&position=1&uuid=b65e99d7-0022-4d8f-81b8-dc63da649d8e'},
+    // Add more items as per your previous examples
+];
+
+let currentTab = 'all';
+let currentPage = 0;
+const itemsPerPage = 9;
+
+const grid = document.querySelector('.portfolio-grid');
+const popup = document.querySelector('.popup');
+const popupImg = document.querySelector('.popup img');
+const popupTitle = document.querySelector('.popup-title');
+const downloadButton = document.querySelector('.download-button');
+const cancelButton = document.querySelector('.cancel-button');
+const nextButton = document.querySelector('.next-button');
+const prevButton = document.querySelector('.prev-button');
+
+const renderItems = () => {
+    const filteredItems = items.filter(item => currentTab === 'all' || item.category === currentTab);
+    const paginatedItems = filteredItems.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
+    grid.innerHTML = '';
+
+    paginatedItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('portfolio-item');
+        itemElement.dataset.title = item.title;
+        itemElement.dataset.link = item.link;
+
+        const image = document.createElement('img');
+        image.src = item.image;
+        itemElement.appendChild(image);
+        grid.appendChild(itemElement);
+    });
+
+    prevButton.disabled = currentPage === 0;
+    nextButton.disabled = currentPage * itemsPerPage + itemsPerPage >= filteredItems.length;
+};
+
+const openPopup = (imageSrc, title, link) => {
+    popup.style.display = 'flex';
+    popupImg.src = imageSrc;
+    popupTitle.textContent = title;
+    downloadButton.onclick = () => window.open(link, '_blank');
+};
+
+cancelButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+nextButton.addEventListener('click', () => {
+    currentPage++;
+    renderItems();
+});
+
+prevButton.addEventListener('click', () => {
+    currentPage--;
+    renderItems();
+});
+
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+        currentTab = button.dataset.tab;
+        currentPage = 0;
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        renderItems();
+    });
+});
+
+grid.addEventListener('click', e => {
+    if (e.target.closest('.portfolio-item')) {
+        const item = e.target.closest('.portfolio-item');
+        openPopup(item.querySelector('img').src, item.dataset.title, item.dataset.link);
+    }
+});
+
+renderItems();  // Initial rendering
+
+// Portfolio Section 
+
+// Custom cursor
+
+// Select the custom cursor elements
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-dot-outline');
+
+// Variables to store positions
+let dotX = 0, dotY = 0; // Dot position
+let outlineX = 0, outlineY = 0; // Outline position
+
+// Update positions on mousemove
+document.addEventListener('mousemove', (e) => {
+  dotX = e.clientX;
+  dotY = e.clientY;
+
+  // Smoothly transition outline to the dot's position
+  outlineX += (dotX - outlineX) * 0.2;
+  outlineY += (dotY - outlineY) * 0.2;
+
+  // Update styles
+  dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+  outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+});
+
+// Optional: Add hover effects
+document.querySelectorAll('a, h1').forEach((element) => {
+  element.addEventListener('mouseenter', () => {
+    dot.style.backgroundColor = 'red';
+    outline.style.borderColor = 'red';
+  });
+  element.addEventListener('mouseleave', () => {
+    dot.style.backgroundColor = '#000';
+    outline.style.borderColor = '#000';
+  });
+});
+// Custom cursor End
+
+// Blog Section Designed
+
+
+
+//Blog Section Designed END
+
+// Back To Top
+// script.js
+const backToTopButton = document.getElementById("backToTop");
+
+// Show or hide the button based on scroll position
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+
+// Smooth scroll to top when the button is clicked
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+//Back To Top End
+
+//smooth scrolling effect
+document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+//smooth scrolling effect End
+
+//Company Section
+
+
+const track = document.querySelector("#track");
+const logoSlide = track.querySelector(".logo-slide");
+
+// Clone the logo slide multiple times
+for (let i = 0; i < 4; i++) {
+  track.appendChild(logoSlide.cloneNode(true));
+}
+
+let scrollPosition = 0;
+const speed = 1;
+let isPlaying = true;
+let animationFrameId = null;
+
+function scroll() {
+  if (!isPlaying) return; // Stop if paused
+
+  scrollPosition -= speed;
+  const slideWidth = logoSlide.offsetWidth;
+  if (Math.abs(scrollPosition) >= slideWidth) {
+    scrollPosition += slideWidth;
+  }
+  track.style.transform = `translateX(${scrollPosition}px)`;
+  animationFrameId = requestAnimationFrame(scroll);
+}
+
+// Updated hover handlers
+track.addEventListener("mouseenter", () => {
+  isPlaying = false;
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+});
+
+track.addEventListener("mouseleave", () => {
+  isPlaying = true;
+  scroll(); // Restart the animation
+});
+
+// Start the animation
+scroll();
+
+
+
+//Contact Us Section END
+
+//Preloading Effect
+
+window.onload = function () {
+  // After the page has loaded, hide the preloader and show the content
+  document.getElementById('preloader').classList.add('hide-preloader');
+  document.getElementById('content').classList.add('show-content');
+  
+  // Optionally, change the custom title dynamically
+  // Example: Change preloader title after 2 seconds
+  setTimeout(() => {
+      document.getElementById('preloader-title').textContent = 'Almost There...';
+  }, 2000);
+};
+
+//Preloading Effect END
+
+
+//PopUp YouTube Button
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openModal = document.getElementById("openModal");
+  const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("videoFrame");
+
+  // Open modal and play video
+  openModal.addEventListener("click", () => {
+    modal.style.display = "flex";
+    // Play the video when modal opens
+    iframe.src += "?autoplay=1";  // Adding autoplay query parameter to play the video automatically
+  });
+
+  // Close modal and stop video
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    iframe.src = iframe.src.split("?")[0];  // Stop video by removing autoplay
+  });
+
+  // Close modal when clicking outside the modal content
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      iframe.src = iframe.src.split("?")[0];  // Stop video by removing autoplay
+    }
+  });
+});
+
+
+
+
+//PopUp YouTube Button END
+
+
+// <!--Hire Me Button With Image--> */
+
+// Get elements
+const popupFormHHr = document.getElementById('popup-formHHr');
+const openPopupBtnHHr = document.querySelector('.open-popup-btnHHr');
+const closeBtnHHr = document.getElementById('close-btnHHr');
+
+// Open popup
+openPopupBtnHHr.addEventListener('click', () => {
+  popupFormHHr.style.display = 'flex';
+  setTimeout(() => {
+    popupFormHHr.classList.add('show');
+    popupFormHHr.classList.remove('hide');
+  }, 10); // Allow display time before animation
+});
+
+// Close popup (X button)
+closeBtnHHr.addEventListener('click', closePopup);
+
+// Close popup (click outside)
+window.addEventListener('click', (e) => {
+  if (e.target === popupFormHHr) closePopup();
+});
+
+// Close popup function with animation
+function closePopup() {
+  popupFormHHr.classList.add('hide');
+  popupFormHHr.classList.remove('show');
+  setTimeout(() => {
+    popupFormHHr.style.display = 'none';
+  }, 500); // Match the CSS transition duration
+}
+// <!--Hire Me Button With Image END--> */
+
+
+
+
+//<!--Image Slider using -->
+
+const slides = document.querySelectorAll('.ss-gallery-slide');
+const thumbnails = document.querySelectorAll('.ss-thumbnail');
+let currentIndex = 0;
+const totalSlides = slides.length;
+
+// Function to update the active slide and thumbnail
+function updateSlider(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+
+  thumbnails.forEach((thumbnail, i) => {
+    thumbnail.classList.remove('active');
+    if (i === index) thumbnail.classList.add('active');
+  });
+}
+
+// Initialize first slide as active
+updateSlider(currentIndex);
+
+// Auto-loop for the slides
+function autoLoop() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider(currentIndex);
+}
+
+// Start auto-loop every 3 seconds
+let sliderInterval = setInterval(autoLoop, 3000);
+
+// Manual control via thumbnail clicks
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', () => {
+    clearInterval(sliderInterval); // Stop auto-loop
+    updateSlider(index);
+    currentIndex = index; // Update current index
+    sliderInterval = setInterval(autoLoop, 3000); // Restart auto-loop
+  });
+});
+
+
+
+//<!--Image Slider using END -->
+
+
+  </script>
+</body>
+
+</html>
